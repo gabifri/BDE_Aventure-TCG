@@ -1,0 +1,73 @@
+[
+    {
+        "id": 12,
+        "Type": "Outils",
+        "nom": "Distributeur Automatique",
+        "src": "assets/img/Outils/Distributeur Automatique.jpg",
+        "Argent": 0,
+        "CM": 0,
+        "Energy": 2,
+        "Temps": 0
+    },
+    {
+        "id": 13,
+        "Type": "Outils",
+        "nom": "Message Slack",
+        "src": "assets/img/Outils/Message Slack.png",
+        "Argent": 0,
+        "CM": 0,
+        "Energy": 0,
+        "Temps": 4
+    },
+    {
+        "id": 14,
+        "Type": "Outils",
+        "nom": "Carte Etudiante",
+        "src": "assets/img/Outils/Carte Etudiante.png",
+        "Argent": 2,
+        "CM": 0,
+        "Energy": 0,
+        "Temps": 0
+    },
+    {
+        "id": 15,
+        "Type": "Outils",
+        "nom": "CV",
+        "src": "assets/img/Outils/CV.png",
+        "Argent": 0,
+        "CM": 0,
+        "Energy": 0,
+        "Temps": -1
+    },
+    {
+        "id": 16,
+        "Type": "Outils",
+        "nom": "Clés",
+        "src": "assets/img/Outils/Cles.jpg",
+        "Argent": 0,
+        "CM": 0,
+        "Energy": 0,
+        "Temps": 0,
+        "Special": "Unlock" 
+    },
+    {
+        "id": 17,
+        "Type": "Outils",
+        "nom": "Café",
+        "src": "assets/img/Outils/Cafe.png",
+        "Argent": 0,
+        "CM": 0,
+        "Energy": 1,
+        "Temps": 0
+    },
+    {
+        "id": 18,
+        "Type": "Partenariat",
+        "nom": "Laura Todd",
+        "src": "assets/img/Partenariat/Laura Todd.png",
+        "Argent": 2,
+        "CM": 0,
+        "Energy": 0,
+        "Temps": 0
+    }
+]

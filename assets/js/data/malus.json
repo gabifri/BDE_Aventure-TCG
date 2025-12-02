@@ -1,0 +1,53 @@
+[
+{
+        "id": 19,
+        "Type": "Malus",
+        "nom": "Enfermé dans l'école",
+        "src": "assets/img/Malus/Enfermer dans l'école.jpg",
+        "Argent": 0,
+        "CM": 0,
+        "Energy": 0,
+        "Temps": 0,
+        "Special": "Lock_Stats"
+    },
+    {
+        "id": 20,
+        "Type": "Malus",
+        "nom": "Mauvaise Nuit (Dossier)",
+        "src": "assets/img/Malus/Mauvaise Nuit.jpg",
+        "Argent": 0,
+        "CM": 0,
+        "Energy": 0,
+        "Temps": 3
+    },
+    {
+        "id": 21,
+        "Type": "Malus",
+        "nom": "Edusign",
+        "src": "assets/img/Malus/Edusign.png",
+        "Argent": 0,
+        "CM": 0,
+        "Energy": 0,
+        "Temps": 2
+    },
+    {
+        "id": 22,
+        "Type": "Malus",
+        "nom": "Mauvaise Nuit (Code)",
+        "src": "assets/img/Malus/Mauvaise Nuit-1.jpg",
+        "Argent": 0,
+        "CM": 0,
+        "Energy": 0,
+        "Temps": 3
+    },
+    {
+        "id": 23,
+        "Type": "Malus",
+        "nom": "Self Learning",
+        "src": "assets/img/Malus/Self Learning.png",
+        "Argent": 0,
+        "CM": 0,
+        "Energy": 0,
+        "Temps": 3
+    }
+]

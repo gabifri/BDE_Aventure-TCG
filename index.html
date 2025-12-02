@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BDE Adventure - TCG</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="assets/img/logo.png" />
+    </head>
+    <body>
+        <!-- Popup d'introduction -->
+        <div id="popupIntro">
+            <div class="cartePopup">
+                <h1>Bienvenue au combat !</h1>
+                <button onclick="demarrageJeu()">Commencer</button>
+            </div>
+        </div>
+        <!-- Fin de Popup d'introduction -->
+
+        <!-- Plateau de jeu -->
+        <div id="game-board">
+            <h2 id="level"></h2>
+            <h3 id="timer"></h3>
+            <div class="sectionPersonnage">
+                <div class="health-bar" id="ennemiBarreVie">
+                    <div class="health-fill" id="ennemiBarreVieRemplissage"></div>
+                </div>
+                <img id="event" class="personnage" src="assets/img/Event/Soiree d'Ignauguration.png" alt="Ennemi">
+            </div>
+            <div class="sectionPersonnage">
+                <div class="health-bar" id="joueurBarreVie">
+                    <div class="health-fill" id="joueurBarreVieRemplissage"></div>
+                </div>
+                <img id="player" class="personnage" src="assets/img/player.png" alt="Joueur">
+            </div>
+            <div class="sectionAction">
+                <p id="announcement">Choisissez votre attaque !</p>
+                <div id="espaceBouton">
+                    <button onclick="attaqueJoueur('attaque1')">Attaque 1 (-10 PV)</button>
+                    <button onclick="attaqueJoueur('attaque2')">Attaque 2 (-20 PV)</button>
+                    <button onclick="attaqueJoueur('attaque3')">Attaque 3 (-20 PV)</button>
+                    <button onclick="attaqueJoueur('attaque4')">Attaque 4 (-30 PV)</button>
+                    <button onclick="lvlPlus()">LVL +1</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popup de conclusion -->
+        <div id="popupFin" class="hide">
+            <div class="cartePopup">
+                <h1 id="messageFin"></h1>
+                <button onclick="redemarrageJeu()">Recommencer</button>
+            </div>
+        </div>
+        <!-- Fin de popup de conclusion -->
+
+        <!-- Import du Javascript -->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
