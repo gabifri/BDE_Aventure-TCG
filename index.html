@@ -22,10 +22,24 @@
             <h2 id="level"></h2>
             <h3 id="timer"></h3>
             <div class="sectionPersonnage">
-                <div class="health-bar" id="ennemiBarreVie">
+                <div class="health-bar hide" id="ennemiBarreVie">
                     <div class="health-fill" id="ennemiBarreVieRemplissage"></div>
                 </div>
                 <img id="event" class="personnage" src="assets/img/Event/Soiree d'Ignauguration.png" alt="Ennemi">
+                <div class="stats">
+                    <div class="stat-content">
+                        <img class="icon" src="assets/icon/photo.png" alt="Icon Couverture Médiatique">
+                        <h2 id="CM" class="stat-txt"></h2>
+                    </div>
+                    <div class="stat-content">
+                        <img class="icon" src="assets/icon/argent.png" alt="Icon argent">
+                        <h2 id="argent" class="stat-txt"></h2>
+                    </div>
+                    <div class="stat-content">
+                        <img class="icon" src="assets/icon/energy.png" alt="Icon energy">
+                        <h2 id="energy" class="stat-txt"></h2>
+                    </div>
+                </div>
             </div>
             <div class="sectionPersonnage">
                 <div class="health-bar" id="joueurBarreVie">
@@ -40,16 +54,15 @@
                     <button onclick="attaqueJoueur('attaque2')">Attaque 2 (-20 PV)</button>
                     <button onclick="attaqueJoueur('attaque3')">Attaque 3 (-20 PV)</button>
                     <button onclick="attaqueJoueur('attaque4')">Attaque 4 (-30 PV)</button>
-                    <button onclick="lvlPlus()">LVL +1</button>
                 </div>
             </div>
         </div>
 
         <!-- Popup de conclusion -->
-        <div id="popupFin" class="hide">
+        <div id="popup" class="hide">
             <div class="cartePopup">
-                <h1 id="messageFin"></h1>
-                <button onclick="redemarrageJeu()">Recommencer</button>
+                <h1 id="popupMsg"></h1>
+                <button id="btn" onclick="redemarrageJeu()">Recommencer</button>
             </div>
         </div>
         <!-- Fin de popup de conclusion -->
