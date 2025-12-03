@@ -116,6 +116,33 @@ body {
     transition: width 0.5s;
 }
 
+/*Stats*/
+
+.sectionPersonnage{
+    display: flex;
+    flex-direction: row;
+}
+
+.stats{
+    background-color: #713c84;
+    padding: 5px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.stat-content{
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon{
+    height: 15px;
+    margin-right: 4px;
+}
 
 /* Design Espace de choix ---------------------------- */
 .sectionAction{

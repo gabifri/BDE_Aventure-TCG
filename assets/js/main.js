@@ -3,6 +3,7 @@
  *SRC1 : https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch
  *SRC2 : https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Using_promises
  *SRC3 : https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array
+ *SRC4 : https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax
  */
 
 /*Variables ========================================= */
@@ -18,6 +19,26 @@ let time = 0;
 let durationTimer = time;
 let seconde = 0;
 let secondePrint;
+let lvlTime;
+let lvlCM;
+let lvlArgent;
+let lvlEnergy;
+let chrono;
+let win;
+
+const lvlWin = {
+    '1' : false,
+    '2' : false,
+    '3' : false,
+    '4' : false,
+    '5' : false,
+    '6' : false,
+    '7' : false,
+    '8' : false,
+    '9' : false,
+    '10' : false,
+    '11' : false
+}
 
 /*Attaque*/
 const degatsAttaque = {
@@ -29,18 +50,13 @@ const degatsAttaque = {
 
 /*Algo ============================================= */
 function importJSON(val, JSON){
-    console.log(`Import Start from "assets/js/data/${JSON}.json" to ${val}`)
+    console.log(`Import Start from "assets/js/data/${JSON}.json" to ${JSON}`)
     fetch(`assets/js/data/${JSON}.json`) // On va chercher le fichier JSON [SRC1]
         .then(reponse => reponse.json()) // then = ensuite (on recupére le texte brut du JSON) On convertit le fichier en JS [SRC2]
         .then(data => { //[SRC2]
-            val = data; // On incorpore le JSON dans la variable Event 
+            val.push(...data); // On incorpore le JSON dans la variable Event les "..." permette de vider Data dans la variable choisi [SRC4]
             ActuLevel(1);  // On lance le niveau 1 direct
         });
-        if (val.length === 0){
-            console.log("Import Fail")
-        } else{
-            console.log("Import Succes")
-        }
 }
 
 function ActuLevel(levelSelect) {
@@ -49,26 +65,42 @@ function ActuLevel(levelSelect) {
     const carte = events[levelSelect - 1]; //Le tableau Event remplit plus tot avec le info du JSON, commence à 0 (donc ID 0 = LV 1) [SRC3]
     document.getElementById('event').src = carte.src;
     time = carte.Temps;
+    lvlTime = time;
     speak("level",carte.nom)
-    printTimer()
+    speak("CM",carte.CM)
+    speak("argent",carte.Argent)
+    speak("energy",carte.Energy)
+    timer()
+    gameWin()
 }
 
-function lvlPlus(){
+function lvlPlus(win){
     lvlSelct = lvlSelct + 1;
+    if(win==true){
+        lvlWin[lvlSelct] = true
+    } else (
+        lvlWin[lvlSelct] = false
+    )
     ActuLevel(lvlSelct)
 }
 
 function timer(){
-    setInterval(() => {
-        printTimer()
+    if(chrono !== null){
+        clearInterval(chrono);
+    }
+    seconde = 0; 
+    chrono = setInterval(() => {
+        printTimer();
+        
         if(seconde > 0){
-            seconde--
-        } else{
-            if(time>0){
-                time--
+            seconde--;
+        } else {
+            if(time > 0){
+                time--;
                 seconde = 59;
-            } else{
-                conclusionVictoire(false)
+            } else {
+                lvlWinDetect(false);
+                clearInterval(chrono); 
             }
         }
     }, 1000);
@@ -94,9 +126,8 @@ function demarrageJeu(){
     importJSON(malus,"malus")
     document.getElementById('popupIntro').style.display = "none";
     ActuLevel(1)
-    timer(level)
     speak("announcement", "Un Enemie Approche")
-    setTimeout(() => { // C'est une fonction fléchée, une fonction qui ne marche que dans ce cas précis
+    setTimeout(() => { 
         speak("announcement", "Choisissez votre attaque !")
     }, 3000);
 }
@@ -131,4 +162,33 @@ function attaqueEnnemi() {
     updateScore('player', degats);
     speak("announcement", `L'attaque ennemie vous inflige ${degats} de dégâts.`);
     if (vieJoueur <= 0) conclusionVictoire(false);
+}
+
+function popup(cible, action, message, texteBtn){
+    if(action==true){
+        document.getElementById(cible).classList.remove("hide");
+        speak("popupMsg", message)
+        speak("btn", texteBtn)
+    }
+    if(action==false){
+        document.getElementById(cible).classList.add("hide");
+    }
+}
+
+function gameWin(){
+    if(lvlWin["1"] == true && lvlWin["2"]  == true && lvlWin["3"]  == true && lvlWin["4"]  == true && lvlWin["5"]  == true && lvlWin["6"]  == true && lvlWin["7"]  == true && lvlWin["8"]  == true && lvlWin["9"]  == true && lvlWin["10"]  == true && lvlWin["11"]  == true){
+        console.log("Game Win")
+        popup(true, "Vous avez réussie ! Le BDE a fait tout ses événement Félicitation !")
+    }
+}
+
+function lvlWinDetect(win) {
+    clearInterval(chrono);
+    if (win==true) {
+        popup("popupIntro", true, "Vous avez réussie ! Le BDE a fait tout ses événement Félicitation !","Recommencer")
+    } else {
+        popup("popupIntro", true, "Mince, Une prochaine fois", "Recommencer")
+    }
+    document.getElementById("btn").onclick.
+    gameWin()
 }
