@@ -1,53 +1,57 @@
 [
 {
-        "id": 19,
+        "id": 1,
         "Type": "Malus",
         "nom": "Enfermé dans l'école",
-        "src": "assets/img/Malus/Enfermer dans l'école.jpg",
+        "src": "assets/img/Malus/Enfermer dans l'école.png",
         "Argent": 0,
         "CM": 0,
         "Energy": 0,
         "Temps": 0,
-        "Special": "Lock_Stats"
+        "capaType": "bloque les personnage"
     },
     {
-        "id": 20,
+        "id": 2,
         "Type": "Malus",
         "nom": "Mauvaise Nuit (Dossier)",
-        "src": "assets/img/Malus/Mauvaise Nuit.jpg",
+        "src": "assets/img/Malus/Mauvaise Nuit.png",
         "Argent": 0,
         "CM": 0,
-        "Energy": 0,
-        "Temps": 3
+        "Energy": -4,
+        "Temps": 0,
+        "capaType": "energy"
     },
     {
-        "id": 21,
+        "id": 3,
         "Type": "Malus",
         "nom": "Edusign",
         "src": "assets/img/Malus/Edusign.png",
         "Argent": 0,
         "CM": 0,
         "Energy": 0,
-        "Temps": 2
+        "Temps": -1,
+        "capaType": "temps"
     },
     {
-        "id": 22,
+        "id": 4,
         "Type": "Malus",
         "nom": "Mauvaise Nuit (Code)",
-        "src": "assets/img/Malus/Mauvaise Nuit-1.jpg",
+        "src": "assets/img/Malus/Mauvaise Nuit-1.png",
         "Argent": 0,
         "CM": 0,
-        "Energy": 0,
-        "Temps": 3
+        "Energy": -3,
+        "Temps": 0,
+        "capaType": "energy"
     },
     {
-        "id": 23,
+        "id": 5,
         "Type": "Malus",
         "nom": "Self Learning",
         "src": "assets/img/Malus/Self Learning.png",
         "Argent": 0,
         "CM": 0,
         "Energy": 0,
-        "Temps": 3
+        "Temps": -1,
+        "capaType": "temps"
     }
 ]

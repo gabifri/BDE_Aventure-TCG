@@ -1,49 +1,54 @@
 [
     {
-        "id": 12,
+        "id": 1,
         "Type": "Outils",
         "nom": "Distributeur Automatique",
-        "src": "assets/img/Outils/Distributeur Automatique.jpg",
+        "src": "assets/img/tools/DAB.png",
+        "capaType": "energy",
         "Argent": 0,
         "CM": 0,
         "Energy": 2,
         "Temps": 0
     },
     {
-        "id": 13,
+        "id": 2,
         "Type": "Outils",
         "nom": "Message Slack",
-        "src": "assets/img/Outils/Message Slack.png",
+        "src": "assets/img/tools/Message Slack.png",
+        "capaType": "temps",
         "Argent": 0,
         "CM": 0,
         "Energy": 0,
-        "Temps": 4
+        "Temps": 2
     },
     {
-        "id": 14,
+        "id": 3,
         "Type": "Outils",
         "nom": "Carte Etudiante",
-        "src": "assets/img/Outils/Carte Etudiante.png",
+        "src": "assets/img/tools/Carte Etudiante.png",
+        "capaType": "argent",
         "Argent": 2,
         "CM": 0,
         "Energy": 0,
         "Temps": 0
     },
     {
-        "id": 15,
+        "id": 4,
         "Type": "Outils",
         "nom": "CV",
-        "src": "assets/img/Outils/CV.png",
+        "src": "assets/img/tools/CV.png",
+        "capaType": "temps",
         "Argent": 0,
         "CM": 0,
         "Energy": 0,
-        "Temps": -1
+        "Temps": 1
     },
     {
-        "id": 16,
+        "id": 5,
         "Type": "Outils",
         "nom": "Clés",
-        "src": "assets/img/Outils/Cles.jpg",
+        "src": "assets/img/tools/Cles.png",
+        "capaType": "débloque",
         "Argent": 0,
         "CM": 0,
         "Energy": 0,
@@ -51,20 +56,22 @@
         "Special": "Unlock" 
     },
     {
-        "id": 17,
+        "id": 6,
         "Type": "Outils",
         "nom": "Café",
-        "src": "assets/img/Outils/Cafe.png",
+        "src": "assets/img/tools/Cafe.png",
+        "capaType": "energy",
         "Argent": 0,
         "CM": 0,
         "Energy": 1,
         "Temps": 0
     },
     {
-        "id": 18,
+        "id": 7,
         "Type": "Partenariat",
         "nom": "Laura Todd",
-        "src": "assets/img/Partenariat/Laura Todd.png",
+        "src": "assets/img/tools/Laura Todd.png",
+        "capaType": "argent",
         "Argent": 2,
         "CM": 0,
         "Energy": 0,
