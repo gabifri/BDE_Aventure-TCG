@@ -16,7 +16,7 @@ a,p,button{
 
 /* Design Popup ---------------------------- */
 
-#popupIntro, #popupFin {
+#popupIntro, #popupFin, #popupSkin {
     background-color: rgba(0,0,0,0.9);
     width: 100vw;
     height: 100vh;
@@ -44,9 +44,33 @@ a,p,button{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     gap: 20px;
 
     animation: popupSlide 0.5s ease-in-out forwards;
+}
+
+.logo{
+    height: 6svh;
+}
+
+.introTXT{
+    text-align: center;
+}
+
+.choixSkin{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Arrow{
+    height: 5svh;
+}
+
+.skin{
+    height: 40svh;
+    margin: 30px;
 }
 
 /* Fin Design Popup ---------------------------- */

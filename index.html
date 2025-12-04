@@ -5,17 +5,40 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>BDE Adventure - TCG</title>
         <link rel="stylesheet" href="style.css">
-        <link rel="icon" type="image/png" href="assets/img/logo.png" />
+        <link rel="icon" type="image/png" href="assets/img/src/logo.png" />
     </head>
     <body>
         <!-- Popup d'introduction -->
         <div id="popupIntro">
             <div class="cartePopup">
-                <h1>Bienvenue au combat !</h1>
-                <button onclick="demarrageJeu()">Commencer</button>
+                <img src="assets/img/src/Logo BDE.png" alt="Logo BDE Wake Up ESD" class="logo">
+                <h1>Bienvenue Dans BDE Adventure</h1>
+                <h3 class="introTxt">Votre rôle aujourd'hui réussir à faire tout les événements du BDE Wake Up ESD</h2>
+                <h3 class="introTxt">Pour cela, vous aurait à chaque fois 3 stats à faire augmenter au maximum, <br> soit en appelant des perssonage, soit en utilisant de outils</h3>
+                <h3 class="introTxt">Mais attention au temps !</h3>
+                <button onclick="choixSkinPopup()">Commencer</button>
             </div>
         </div>
         <!-- Fin de Popup d'introduction -->
+
+        <!-- Popup Choix du Skin -->
+        <div id="popupSkin" class="hide">
+            <div class="cartePopup">
+                <h1>Choisissez Votre Personnage</h1>
+                <h2 id="nomSkin">Nom</h2>
+                <div class="choixSkin">
+                    <img src="assets/img/src/LeftArrow.png" alt="Left Arrow" class="Arrow" onclick="leftArrow()">
+                    <img id="skinApercu" src="assets/img/skin/Léo.png" alt="skin séléctionner" class="skin">
+                    <img src="assets/img/src/RightArrow.png" alt="Right Arrow" class="Arrow" onclick="rightArrow()">
+                </div>
+                <div class="infoSkin">
+                    <h5 id="roleSkin">Role</h5>
+                    <h4 id="tagSkin">tagline</h4>
+                </div>
+                <button onclick="demarrageJeu()">C'est Partie !</button>
+            </div>
+        </div>
+        <!-- Fin de Choix du skin -->
 
         <!-- Plateau de jeu -->
         <div id="game-board">
@@ -45,7 +68,7 @@
                 <div class="health-bar" id="joueurBarreVie">
                     <div class="health-fill" id="joueurBarreVieRemplissage"></div>
                 </div>
-                <img id="player" class="personnage" src="assets/img/player.png" alt="Joueur">
+                <img id="player" class="personnage" src="assets/img/skin/Léo.png" alt="Joueur">
             </div>
             <div class="sectionAction">
                 <p id="announcement">Choisissez votre attaque !</p>
