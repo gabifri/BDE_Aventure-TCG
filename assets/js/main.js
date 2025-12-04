@@ -6,6 +6,7 @@
  *SRC4 : https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax
  */
 
+console.log("BDE Adventure - V.0.3")
 /*Variables ========================================= */
 /* Point de Vie */
 let vieJoueur = 100
