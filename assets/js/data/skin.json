@@ -1,0 +1,149 @@
+[
+    {
+        "id": 1,
+        "nom": "Léo TORRAS",
+        "role": "Com. & Evénementiel - BDE",
+        "tagline": "L'énergie visible du BDE",
+        "src": "assets/img/skin/Léo.png"
+    },
+    {
+        "id": 2,
+        "nom": "Perrine GAZZERA",
+        "role": "Présidente du BDE",
+        "tagline": "La vision, la cohésion et la vibe",
+        "src": "assets/img/skin/Perrine.png"
+    },
+    {
+        "id": 3,
+        "nom": "Eloise POULAGE-LISI",
+        "role": "Pôle Partenariat du BDE",
+        "tagline": "La force du réseau et des bons plans.",
+        "src": "assets/img/skin/Eloise.png"
+    },
+    {
+        "id": 4,
+        "nom": "Louna HENOT-ROFFE",
+        "role": "Trésorière du BDE",
+        "tagline": "La gardienne du budget (et du bon sens).",
+        "src": "assets/img/skin/Louna.png"
+    },
+    {
+        "id": 5,
+        "nom": "Jean-Baptiste DAQUET",
+        "role": "Intervenant",
+        "tagline": "Fou & Distingué",
+        "src": "assets/img/skin/JB.png"
+    },
+    {
+        "id": 6,
+        "nom": "Alaa BENKADA",
+        "role": "Chargé de com. à l'ESD",
+        "tagline": "Si elle était influenceuse, elle serait top 1",
+        "src": "assets/img/skin/Alaa.png"
+    },
+    {
+        "id": 7,
+        "nom": "Amélie DESSMOND",
+        "role": "Directrice pédagogique à l'ESD",
+        "tagline": "Geek & Futée",
+        "src": "assets/img/skin/Amelie.png"
+    },
+    {
+        "id": 8,
+        "nom": "Bryan PHAN VAN HO",
+        "role": "Responsable studio à l'ESD",
+        "tagline": "Gardien incontesté du studio",
+        "src": "assets/img/skin/Bryan.png"
+    },
+    {
+        "id": 9,
+        "nom": "Camille LE GALL",
+        "role": "Coache en relation entreprise à l'ESD",
+        "tagline": "L'as de Linkedin",
+        "src": "assets/img/skin/Camille.png"
+    },
+    {
+        "id": 10,
+        "nom": "Catherine GUERIN",
+        "role": "Intervenante",
+        "tagline": "Brillante et Cassante",
+        "src": "assets/img/skin/Catherine.png"
+    },
+    {
+        "id": 11,
+        "nom": "Charlotte DAUPLAIS",
+        "role": "Directrice pédagogique de l'ESD",
+        "tagline": "Buveuse de café dans une tasse notion",
+        "src": "assets/img/skin/Charlotte.png"
+    },
+    {
+        "id": 12,
+        "nom": "Emmanuelle GAUMONT",
+        "role": "Intervenante",
+        "tagline": "Créative à l'oeil aiguisé",
+        "src": "assets/img/skin/Emmanuelle.png"
+    },
+    {
+        "id": 13,
+        "nom": "Erwan DUJARDIN-BLAIZOT",
+        "role": "Responsable d'accueil à l'ESD",
+        "tagline": "Adorable & Serviable",
+        "src": "assets/img/skin/Erwan.png"
+    },
+    {
+        "id": 14,
+        "nom": "Justine MAJEUNE",
+        "role": "Directrice de l'ESD",
+        "tagline": "Directrice passionnée qui aime ses élèves",
+        "src": "assets/img/skin/Justine.png"
+    },
+    {
+        "id": 15,
+        "nom": "Laurent HADDAD",
+        "role": "Intervenant",
+        "tagline": "Brillant et cultivé",
+        "src": "assets/img/skin/Laurent.png"
+    },
+    {
+        "id": 16,
+        "nom": "Logan BOUDABY",
+        "role": "Responsable d'accueil à l'ESD",
+        "tagline": "Gentil & Aidant",
+        "src": "assets/img/skin/Logan.png"
+    },
+    {
+        "id": 17,
+        "nom": "Lou ATTAL",
+        "role": "Alumni",
+        "tagline": "Brillante et Cassante",
+        "src": "assets/img/skin/Lou.png"
+    },
+    {
+        "id": 18,
+        "nom": "Marine GOGLIN",
+        "role": "Responsable relation entreprise à l'ESD",
+        "tagline": "Business is Business",
+        "src": "assets/img/skin/Marine.png"
+    },
+    {
+        "id": 19,
+        "nom": "Sonia PHAM",
+        "role": "Intervenante",
+        "tagline": "Maternelle & Bienveillante",
+        "src": "assets/img/skin/Sonia.png"
+    },
+    {
+        "id": 20,
+        "nom": "Tarek NASSER",
+        "role": "Responsable financier à l'ESD",
+        "tagline": "Aussi proche de ses sous que Picsou",
+        "src": "assets/img/skin/Tarek.png"
+    },
+    {
+        "id": 21,
+        "nom": "Yvette NSELE",
+        "role": "Chargée des admissions à l'ESD",
+        "tagline": "Douce & Radieuse",
+        "src": "assets/img/skin/Yvette.png"
+    }
+]

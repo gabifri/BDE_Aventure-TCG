@@ -6,7 +6,7 @@
  *SRC4 : https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax
  */
 
-console.log("BDE Adventure - V.0.3")
+console.log("BDE Adventure - V.0.4")
 /*Variables ========================================= */
 /* Point de Vie */
 let vieJoueur = 100
@@ -15,6 +15,7 @@ let lvlSelct = 0;
 let events = [];
 let tools = [];
 let malus = [];
+let skinDB = [];
 let level = 1;
 let time = 0;
 let durationTimer = time;
@@ -26,6 +27,7 @@ let lvlArgent;
 let lvlEnergy;
 let chrono;
 let win;
+let skinSelect = 1;
 
 const lvlWin = {
     '1' : false,
@@ -60,6 +62,16 @@ function importJSON(val, JSON){
         });
 }
 
+function lvlPlus(win){
+    lvlSelct++;
+    if(win==true){
+        lvlWin[lvlSelct] = true
+    } else (
+        lvlWin[lvlSelct] = false
+    )
+    ActuLevel(lvlSelct)
+}
+
 function ActuLevel(levelSelect) {
     if (events.length === 0) return; //Sécurité au cas ou le JSON charge pas
     level = levelSelect; //On initialise le niveau
@@ -73,16 +85,6 @@ function ActuLevel(levelSelect) {
     speak("energy",carte.Energy)
     timer()
     gameWin()
-}
-
-function lvlPlus(win){
-    lvlSelct = lvlSelct + 1;
-    if(win==true){
-        lvlWin[lvlSelct] = true
-    } else (
-        lvlWin[lvlSelct] = false
-    )
-    ActuLevel(lvlSelct)
 }
 
 function timer(){
@@ -121,11 +123,67 @@ function speak(cible, message){
     document.getElementById(cible).textContent = message
 }
 
+function popup(cible, action, message, texteBtn){
+    if(action==true){
+        document.getElementById(cible).classList.remove("hide");
+        speak("popupMsg", message)
+        speak("btn", texteBtn)
+    }
+    if(action==false){
+        document.getElementById(cible).classList.add("hide");
+    }
+}
+
+/**Récupération des fichier JSON */
+importJSON(skinDB, "skin")
+importJSON(events,"event")
+importJSON(tools,"tools")
+importJSON(malus,"malus")
+
+function ActuSkinApercu(){
+    const printSkin = skinDB[skinSelect - 1];
+    document.getElementById('skinApercu').src = printSkin.src;
+    document.getElementById('nomSkin').textContent = printSkin.nom;
+    const printTagline = `"${printSkin.tagline}"`
+    document.getElementById('tagSkin').textContent = printTagline;
+    document.getElementById('roleSkin').textContent = printSkin.role;
+}
+
+function ActuSkin(){
+    const printSkin = skinDB[skinSelect - 1];
+    document.getElementById('player').src = printSkin.src;
+}
+
+function choixSkinPopup(){
+    skinSelect = 1
+    ActuSkinApercu()
+    popup("popupIntro", false)
+    popup("popupSkin", true)
+}
+
+function leftArrow(){
+    if (skinSelect>1){
+        skinSelect--
+    } else if(skinSelect<=1){
+        skinSelect = 21;
+    }
+    console.log("Skin Séléctioner N° : " + skinSelect)
+    ActuSkinApercu()
+}
+
+function rightArrow(){
+    if (skinSelect<21){
+        skinSelect++
+    } else if(skinSelect>=21){
+        skinSelect = 1;
+    }
+    console.log("Skin Séléctioner N° : " + skinSelect)
+    ActuSkinApercu()
+}
+
 function demarrageJeu(){
-    importJSON(events,"event")
-    importJSON(tools,"tools")
-    importJSON(malus,"malus")
-    document.getElementById('popupIntro').style.display = "none";
+    ActuSkin()
+    popup("popupSkin", false)
     ActuLevel(1)
     speak("announcement", "Un Enemie Approche")
     setTimeout(() => { 
@@ -163,17 +221,6 @@ function attaqueEnnemi() {
     updateScore('player', degats);
     speak("announcement", `L'attaque ennemie vous inflige ${degats} de dégâts.`);
     if (vieJoueur <= 0) conclusionVictoire(false);
-}
-
-function popup(cible, action, message, texteBtn){
-    if(action==true){
-        document.getElementById(cible).classList.remove("hide");
-        speak("popupMsg", message)
-        speak("btn", texteBtn)
-    }
-    if(action==false){
-        document.getElementById(cible).classList.add("hide");
-    }
 }
 
 function gameWin(){
