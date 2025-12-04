@@ -130,6 +130,10 @@ body {
     border-radius: 10px;
 }
 
+.stat-txt{
+    color : white;
+}
+
 .stat-content{
     display: flex;
     flex-direction: row;
@@ -141,7 +145,7 @@ body {
 
 .icon{
     height: 15px;
-    margin-right: 4px;
+    margin-right: 10px;
 }
 
 /* Design Espace de choix ---------------------------- */
