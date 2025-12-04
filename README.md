@@ -1,1 +1,2 @@
-# BDE-Aventure---TCG
+# BDE Aventure - TCG
+V.0.3
